@@ -7,6 +7,7 @@ import java.awt.Robot;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -14,9 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MoveTheMouseController {
 	
 	private boolean bool;
-	
-
-
 
 	@GetMapping("/start")
 	public String test(Model theModel) {
@@ -39,14 +37,20 @@ public class MoveTheMouseController {
 	        hal.mouseMove(x,y);   
 	    }
 	    
-	    return "move-the-mouse";
+	    return "redirect:start";
 	}
 	
 	@RequestMapping("/stop")
 	public String stopTheMouse () {
 		bool=false;
 		
-		return "move-the-mouse";
+		return "redirect:start";
+	}
+	
+	@GetMapping("/contact")
+	public String contactUs() {
+		
+		return "contact";
 	}
 
 	
