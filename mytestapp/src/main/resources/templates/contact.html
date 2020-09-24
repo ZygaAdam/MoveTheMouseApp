@@ -26,11 +26,16 @@
 
 			<input type="text" class="form-control mb-4 col-4"
 				placeholder="Email"> <input type="text"
-				class="form-control mb-4 col-4" placeholder="Subject">
+				class="form-control mb-4 col-4" placeholder="First Name"> <input
+				type="text" class="form-control mb-4 col-4" placeholder="Last Name">
+			<input type="text" class="form-control mb-4 col-4"
+				placeholder="Subject">
 
 			<textarea class="form-control mb-4 col-4" placeholder="Message"></textarea>
 
-			<button type="submit" class="btn btn-info col-2">Send</button>
+			<!-- <button type="submit" class="btn btn-info col-2">Send</button> -->
+			<a th:href="@{sent}" class="btn btn-info col-2">
+					Send </a>
 
 		</form>
 		<hr>
